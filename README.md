@@ -1,16 +1,24 @@
-sudo cp /Volumes/EFI/EFI/OC/config.plist /Volumes/EFI/EFI/OC/config.plist.backup
-cd /tmp
-curl -L -o config.plist https://drive.usercontent.google.com/download?id=1x7E8Z9qA1bC2dE3fG4hI5jK6lM7nO8pQ
-sudo cp /tmp/config.plist /Volumes/EFI/EFI/OC/
-
-Шаг 5. Открой новый конфиг и вставь свои серийники
-bash
-
-open /Volumes/EFI/EFI/OC/config.plist
-
-В редакторе найди PlatformInfo → Generic и замени:
-Ключ	Твоё значение
-SystemSerialNumber	F5KKW9YYP7QM
-MLB	F5K325104GUK3F7A8
-SystemUUID	24516A39-F9F8-4F35-B31F-95490B2CA6BE
-ROM	182032ADDA1B
+sudo /usr/libexec/PlistBuddy -c "Delete :Kernel:Patch" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch array" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0 dict" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Count integer 1" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Find data aGliZXJuYXRlaGlkcmVhZHkAaGliZXJuYXRlY291bnQA" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Identifier string kernel" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Limit integer 0" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Mask data" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:MaxKernel string" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:MinKernel string 20.4.0" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Replace data aGliZXJuYXRlaGlkcmVhZHkAaHZfdm1tX3ByZXNlbnQA" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:ReplaceMask data" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:0:Skip integer 0" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1 dict" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Count integer 1" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Find data Ym9vdCBzZXNzaW9uIFVVSUQAaHZfdm1tX3ByZXNlbnQA" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Identifier string kernel" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Limit integer 0" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Mask data" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:MaxKernel string" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:MinKernel string 22.0.0" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Replace data Ym9vdCBzZXNzaW9uIFVVSUQAaGliZXJuYXRlY291bnQA" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:ReplaceMask data" /Volumes/EFI/EFI/OC/config.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Kernel:Patch:1:Skip integer 0" /Volumes/EFI/EFI/OC/config.plist
