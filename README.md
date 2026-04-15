@@ -1,1 +1,44 @@
-https://raw.githubusercontent.com/sickcodes/Docker-OSX/master/config/config.plist
+<dict>
+    <key>Count</key>
+    <integer>1</integer>
+    <key>Find</key>
+    <data>aGliZXJuYXRlaGlkcmVhZHkAaGliZXJuYXRlY291bnQA</data>
+    <key>Identifier</key>
+    <string>kernel</string>
+    <key>Limit</key>
+    <integer>0</integer>
+    <key>Mask</key>
+    <data></data>
+    <key>MaxKernel</key>
+    <string></string>
+    <key>MinKernel</key>
+    <string>20.4.0</string>
+    <key>Replace</key>
+    <data>aGliZXJuYXRlaGlkcmVhZHkAaHZfdm1tX3ByZXNlbnQA</data>
+    <key>ReplaceMask</key>
+    <data></data>
+    <key>Skip</key>
+    <integer>0</integer>
+</dict>
+<dict>
+    <key>Count</key>
+    <integer>1</integer>
+    <key>Find</key>
+    <data>Ym9vdCBzZXNzaW9uIFVVSUQAaHZfdm1tX3ByZXNlbnQA</data>
+    <key>Identifier</key>
+    <string>kernel</string>
+    <key>Limit</key>
+    <integer>0</integer>
+    <key>Mask</key>
+    <data></data>
+    <key>MaxKernel</key>
+    <string></string>
+    <key>MinKernel</key>
+    <string>22.0.0</string>
+    <key>Replace</key>
+    <data>Ym9vdCBzZXNzaW9uIFVVSUQAaGliZXJuYXRlY291bnQA</data>
+    <key>ReplaceMask</key>
+    <data></data>
+    <key>Skip</key>
+    <integer>0</integer>
+</dict>
